@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node init && next dev",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "test": "jest --runInBand",
@@ -13,7 +13,7 @@
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:report": "playwright show-report",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "node init && storybook build",
     "size": "size-limit",
     "bundle-report": "node scripts/bundle-budget.mjs",
     "test:bundle-report": "node --test scripts/bundle-budget.test.mjs"
@@ -74,7 +74,11 @@
     "image-size": "^1.2.1",
     "sharp": "^0.33.5",
     "ws": "^8.18.0",
-    "webpack": "5.101.2"
+    "webpack": "5.101.2",
+    "brace-expansion@1": "1.1.18",
+    "brace-expansion@5": "5.0.9",
+    "minimatch@9": "9.0.7",
+    "glob@10": "10.5.0"
   },
   "engines": {
     "node": "20.19.5"
